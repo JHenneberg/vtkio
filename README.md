@@ -13,6 +13,44 @@ parallel XML file formats are supported.
 The Legacy format parser is written using [nom](https://crates.io/crates/nom).
 XML VTK files are import and exported with [`quick-xml`](https://crates.io/crates/quick-xml) and [`serde`](https://crates.io/crates/serde) crates.
 
+## Supported `CellTypes`
+
+List about supported [CellTypes](https://kitware.github.io/vtk-examples/site/VTKBook/05Chapter5/#54-cell-types)
+
+* [Linear Cells](https://kitware.github.io/vtk-examples/site/VTKBook/05Chapter5/#linear-cells):
+  * [x] Vertex
+  * [x] PolyVertex
+  * [x] Line
+  * [x] PolyLine (n Lines)
+  * [x] Triangle
+  * [x] Triangle strip (n Triangles)
+  * [x] Quadrilateral
+  * [x] Pixel
+  * [x] Polygon (n Points)
+  * [x] Tetrahedron
+  * [x] Hexahedron
+  * [x] Voxel
+  * [x] Wedge
+  * [x] Pyramid
+  * [x] Pentagonal Prism
+  * [x] Hexagonal Prism
+* [NonLinear Type](https://kitware.github.io/vtk-examples/site/VTKBook/05Chapter5/#54-cell-types):
+  * [x] Quadric Edge
+  * [x] Quadric Triangle
+  * [x] Quadric Linear Quad
+  * [x] Quadric Quad
+  * [x] Bi-Quadric Quad
+  * [x] Quadric Tetrahedron
+  * [x] Quadric Pyramid
+  * [x] Quadric Hexahedron
+  * [x] Bi-Quadric Hexahedron
+  * [x] Tri-Quadric Hexahedron
+  * [x] Quadric Linear Wedge
+  * [x] Quadric Wedge
+  * [x] Bi-Quadric Wedge
+
+
+
 
 # Usage
 
@@ -26,7 +64,7 @@ vtkio = "0.6"
 
 ## Examples
 
-Many sample files can be found in the `assets` directory. Below are some examples for using this library. 
+Many sample files can be found in the `assets` directory. Below are some examples for using this library.
 
 ### Import/Export
 
